@@ -1,0 +1,123 @@
+body {
+  background-image: linear-gradient(45deg, hsl(190deg, 41%, 79%) 0%, hsl(183deg, 48%, 77%) 11%, hsl(175deg, 56%, 75%) 22%, hsl(166deg, 64%, 75%) 33%, hsl(155deg, 68%, 76%) 44%, hsl(138deg, 70%, 78%) 56%, hsl(112deg, 71%, 79%) 67%, hsl(88deg, 75%, 76%) 78%, hsl(70deg, 76%, 72%) 89%, hsl(55deg, 87%, 70%) 100%);
+  font-family: "Dubai", sans-serif;
+  font-size: 20px;
+  color: #415707;
+}
+
+[class*=__container] {
+  max-width: 1630px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > .page {
+  flex-grow: 1;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 130px;
+  z-index: 5;
+  width: 100%;
+}
+.header__wrapper {
+  height: 100%;
+  padding: 20px;
+}
+.header__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.header__title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.header__subtitle {
+  letter-spacing: 2px;
+}
+@media (max-width: 480px) {
+  .header__subtitle {
+    letter-spacing: inherit;
+  }
+}
+
+.notes__wrapper {
+  padding: 200px 0 0 0;
+}
+.notes__content {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+  grid-auto-rows: 200px;
+}
+@media (max-width: 1024px) {
+  .notes__content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 510px) {
+  .notes__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.note-card__wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.note-card__wrapper--start {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 3px rgba(255, 255, 255, 0.4) inset;
+  cursor: pointer;
+  padding: 15px;
+  transition: background-color 0.5s ease;
+}
+.note-card__wrapper--start:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.note-card__wrapper--start:active {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset, 0 2px 3px rgba(255, 255, 255, 0.4);
+}
+.note-card__item {
+  height: 100%;
+}
+.note-card__item--start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.note-card__add {
+  font-size: 100px;
+  opacity: 0.5;
+}
+.note-card__text {
+  padding: 15px;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  outline: none;
+}
+.note-card__text::placeholder {
+  opacity: 0.4;
+}
+
+/*# sourceMappingURL=style.css.map */
